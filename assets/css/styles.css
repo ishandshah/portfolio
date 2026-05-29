@@ -224,8 +224,9 @@ ul {
 
 .profile-photo {
   display: block;
-  width: min(100%, 320px);
-  aspect-ratio: 1;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
   object-fit: cover;
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -233,7 +234,22 @@ ul {
 }
 
 .hero-panel .profile-photo {
-  margin-bottom: 1.25rem;
+  width: 100%;
+  max-width: none;
+  height: clamp(280px, 42vw, 420px);
+  object-fit: cover;
+  object-position: 50% 36%;
+  margin: 0;
+}
+
+.portrait-panel {
+  padding: 1.5rem;
+}
+
+.portrait-caption {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: 1rem 0 0;
 }
 
 .eyebrow {
