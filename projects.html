@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Engineering Projects | Ishan Shah</title>
+    <meta name="description" content="Selected engineering projects by Ishan Shah across cloud-native billing, marketplace inventory, Oracle CDC to Kafka, fulfillment optimization, and security intelligence search infrastructure.">
+    <meta name="author" content="Ishan Shah">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ishandshah.github.io/projects.html">
+    <link rel="icon" href="assets/profile.jpg" type="image/jpeg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ishan Shah">
+    <meta property="og:title" content="Engineering Projects | Ishan Shah">
+    <meta property="og:description" content="Selected engineering projects by Ishan Shah across cloud-native billing, marketplace inventory, Oracle CDC to Kafka, fulfillment optimization, and security intelligence search infrastructure.">
+    <meta property="og:url" content="https://ishandshah.github.io/projects.html">
+    <meta property="og:image" content="https://ishandshah.github.io/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Engineering Projects | Ishan Shah">
+    <meta name="twitter:description" content="Selected engineering projects by Ishan Shah across cloud-native billing, marketplace inventory, Oracle CDC to Kafka, fulfillment optimization, and security intelligence search infrastructure.">
+    <meta name="twitter:image" content="https://ishandshah.github.io/assets/og-image.png">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="index.html"><span class="brand-mark">IS</span><span>Ishan Shah</span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links"><span>Menu</span></button>
+        <div class="nav-links" id="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html" aria-current="page">Projects</a>
+          <a href="leadership.html">Leadership</a>
+          <a href="speaking.html">Speaking</a>
+          <a href="service.html">Service</a>
+          <a href="resume.html">Resume</a>
+          <a href="contact.html">Contact</a>
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme">Theme</button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="section page-hero">
+        <div class="container narrow">
+          <p class="eyebrow">Projects</p>
+          <h1>Selected Engineering Work</h1>
+          <p class="page-intro">
+            This page highlights selected public-safe engineering work by Ishan Shah. The projects are summarized
+            at a high level to describe the technical domain, architecture patterns, and engineering impact without
+            exposing confidential implementation details.
+          </p>
+          <div class="inline-links" aria-label="Project anchors">
+            <a href="#cloud-native-billing-platform">Cloud-native billing platform</a>
+            <a href="#marketplace-inventory-platform">Marketplace inventory platform</a>
+            <a href="#oracle-rms-cdc-kafka-cost-accounting">Oracle RMS CDC to Kafka</a>
+            <a href="#fulfillment-allocation-optimization">Fulfillment allocation optimization</a>
+            <a href="#security-intelligence-search-platform">Security intelligence search platform</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container project-grid">
+          <article class="project-card" id="cloud-native-billing-platform">
+            <div class="project-meta">PayPal</div>
+            <h2>Cloud-Native Usage-Based Billing Platform</h2>
+            <p>
+              As an early engineer on a greenfield billing platform, Ishan contributed to a cloud-native usage-based
+              billing system delivered from concept to production in roughly six months. The work covered REST APIs,
+              Kafka-driven pipelines, Java and Spring Boot services, AWS infrastructure, Kubernetes deployments,
+              Terraform automation, observability, merchant-facing API documentation, and usage aggregation patterns
+              designed for high-volume billing workloads.
+            </p>
+            <dl class="evidence-list" aria-label="Evidence signals for PayPal billing platform">
+              <div><dt>Role</dt><dd>Early engineering contributor across service, platform, and API surfaces.</dd></div>
+              <div><dt>Artifacts</dt><dd>REST APIs, Kafka event flows, Spring Boot services, Kubernetes workloads, Terraform modules, runbooks, and API docs.</dd></div>
+              <div><dt>Evidence signal</dt><dd>Greenfield cloud-native billing platform delivered in six months; designed for 100K+ TPS ingestion and aggregation workloads.</dd></div>
+            </dl>
+            <ul class="impact-list">
+              <li>Helped establish a scalable billing foundation for enterprise merchant use cases.</li>
+              <li>Balanced synchronous APIs with asynchronous event pipelines for reliability and scale.</li>
+              <li>Improved operational readiness through OpenTelemetry, Splunk, Datadog, CloudWatch, CI/CD, and infrastructure automation.</li>
+            </ul>
+            <div class="tags"><span>Usage-Based Billing</span><span>Kafka</span><span>Java</span><span>AWS</span><span>Kubernetes</span></div>
+          </article>
+
+          <article class="project-card" id="marketplace-inventory-platform">
+            <div class="project-meta">Nordstrom</div>
+            <h2>Marketplace Inventory Platform</h2>
+            <p>
+              Ishan helped build a foundational marketplace inventory platform supporting unified inventory visibility
+              across owned and third-party marketplace inventory. The work used Aurora/Postgres, Debezium, Kafka,
+              streaming projections, low-latency APIs, and event-driven architecture patterns for inventory lifecycle
+              state and availability.
+            </p>
+            <dl class="evidence-list" aria-label="Evidence signals for marketplace inventory platform">
+              <div><dt>Role</dt><dd>Backend engineer for inventory state, event modeling, projection logic, and API integration.</dd></div>
+              <div><dt>Artifacts</dt><dd>Inventory event contracts, CDC flows, streaming projections, persistence design, and service APIs.</dd></div>
+              <div><dt>Evidence signal</dt><dd>Foundational platform work connecting owned and marketplace inventory availability patterns, including reverse logistics support.</dd></div>
+            </dl>
+            <ul class="impact-list">
+              <li>Supported accurate marketplace inventory availability.</li>
+              <li>Improved real-time visibility across inventory lifecycle states.</li>
+              <li>Created reusable event-driven patterns for downstream availability and decisioning systems.</li>
+            </ul>
+            <div class="tags"><span>Inventory Systems</span><span>Debezium</span><span>Postgres</span><span>Kafka Streams</span><span>APIs</span></div>
+          </article>
+
+          <article class="project-card" id="oracle-rms-cdc-kafka-cost-accounting">
+            <div class="project-meta">Nordstrom</div>
+            <h2>Oracle RMS CDC to Kafka for Cost Accounting</h2>
+            <p>
+              Ishan built high-throughput CDC and Kafka pipelines to stream inventory and cost-related events from
+              Oracle RMS systems into downstream financial and analytical platforms. The work included schema design,
+              partitioning, ordering, idempotency, history replay, state stores, and event contracts supporting
+              item-level cost, stock-on-hand visibility, invoice-level analysis, and stock ledger transactions.
+            </p>
+            <dl class="evidence-list" aria-label="Evidence signals for Oracle RMS CDC to Kafka">
+              <div><dt>Role</dt><dd>Streaming data engineer for source capture, topic design, replay behavior, and consumer contracts.</dd></div>
+              <div><dt>Artifacts</dt><dd>CDC pipeline design, Kafka schemas, partitioning strategy, idempotency handling, state stores, and replay support.</dd></div>
+              <div><dt>Evidence signal</dt><dd>Finance-facing data movement from legacy retail systems into event-driven analytical workflows.</dd></div>
+            </dl>
+            <ul class="impact-list">
+              <li>Improved near-real-time cost and inventory visibility.</li>
+              <li>Supported finance and accounting reconciliation workflows.</li>
+              <li>Reduced reliance on delayed batch-style processing patterns and supported lower-lag downstream consumption.</li>
+            </ul>
+            <div class="tags"><span>Oracle RMS</span><span>CDC</span><span>Kafka</span><span>Cost Accounting</span><span>Event Contracts</span></div>
+          </article>
+
+          <article class="project-card" id="fulfillment-allocation-optimization">
+            <div class="project-meta">Nordstrom</div>
+            <h2>Fulfillment Allocation Optimization</h2>
+            <p>
+              Ishan contributed to fulfillment allocation optimization systems that balanced speed, cost, and customer
+              proximity. He built service layers, enrichment logic, experimentation workflows, and production controls
+              to support model comparison and rollout while collaborating with data science, finance, supply chain,
+              and engineering partners.
+            </p>
+            <dl class="evidence-list" aria-label="Evidence signals for fulfillment allocation optimization">
+              <div><dt>Role</dt><dd>Service engineer translating optimization outputs into controlled production decisioning paths.</dd></div>
+              <div><dt>Artifacts</dt><dd>Decision services, enrichment logic, Optimizely experiments, historical testing support, rollout safeguards, and fallback behavior.</dd></div>
+              <div><dt>Evidence signal</dt><dd>Cross-functional optimization work spanning engineering, data science, finance, and supply chain, with measurable fulfillment efficiency goals.</dd></div>
+            </dl>
+            <ul class="impact-list">
+              <li>Helped move fulfillment decisioning beyond simple distance-based heuristics.</li>
+              <li>Supported experimentation-driven rollout and fallback strategies.</li>
+              <li>Improved operational control over fulfillment routing decisions.</li>
+            </ul>
+            <div class="tags"><span>Gurobi</span><span>Optimization</span><span>Java</span><span>Spring</span><span>AWS</span></div>
+          </article>
+
+          <article class="project-card" id="security-intelligence-search-platform">
+            <div class="project-meta">Securonix</div>
+            <h2>Security Intelligence Search and Analytics Platform</h2>
+            <p>
+              Ishan worked on a security intelligence platform for real-time anomaly detection, intrusion monitoring,
+              and search-driven investigations. He built data pipelines using Kafka and Redis, indexed enriched data
+              into Solr, implemented DSL operators for analyst search workflows, and improved Solr performance through
+              tuning, sharding, routing, and high-availability design.
+            </p>
+            <dl class="evidence-list" aria-label="Evidence signals for security intelligence platform">
+              <div><dt>Role</dt><dd>Platform engineer for ingestion, enrichment, indexing, analyst query behavior, and search reliability.</dd></div>
+              <div><dt>Artifacts</dt><dd>Kafka pipelines, Redis-backed processing, Solr indexing strategy, DSL operators, and high-availability search design.</dd></div>
+              <div><dt>Evidence signal</dt><dd>Security analytics infrastructure supporting high-volume event search, including 500K events per second indexing and 95% uptime targets.</dd></div>
+            </dl>
+            <ul class="impact-list">
+              <li>Improved Solr search performance by 2x through tuning, document routing, and implicit sharding.</li>
+              <li>Supported large-scale event indexing and security analytics.</li>
+              <li>Strengthened reliability of high-throughput search infrastructure.</li>
+            </ul>
+            <div class="tags"><span>Solr</span><span>Kafka</span><span>Redis</span><span>HDFS</span><span>Security Analytics</span></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="leadership.html">Leadership</a>
+          <a href="speaking.html">Speaking</a>
+          <a href="service.html">Service</a>
+          <a href="resume.html">Resume</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <p>&copy; Ishan Shah. Built with GitHub Pages.</p>
+      </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
