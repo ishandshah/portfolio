@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ishandshah.github.io/sitemap.xml
+Sitemap: https://ishandshah.github.io/ishan-shah-portfolio/sitemap.xml
