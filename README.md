@@ -90,6 +90,12 @@ The GitHub profile URL is currently:
 https://github.com/ishandshah
 ```
 
+The Sessionize speaker profile URL is currently:
+
+```text
+https://sessionize.com/ishan-shah/
+```
+
 ## Indexing Checklist
 
 1. Publish the site on GitHub Pages.
