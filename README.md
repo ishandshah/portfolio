@@ -2,7 +2,7 @@
 
 Static GitHub Pages portfolio site for Ishan Shah, Staff Software Engineer.
 
-Canonical placeholder domain:
+Canonical GitHub Pages host:
 
 ```text
 https://ishandshah.github.io
@@ -70,12 +70,12 @@ For GitHub Pages to use this path, the repository must be named `portfolio` or t
 
 If you want the site at `https://ishandshah.github.io/`, publish it from a repository named `ishandshah.github.io`.
 
-## Placeholder Links To Replace
+## Profile URLs And External Sources
 
-Search for these values before moving to a custom domain:
+Current GitHub Pages URL:
 
 ```text
-https://ishandshah.github.io
+https://ishandshah.github.io/portfolio/
 ```
 
 The LinkedIn URL is currently:
@@ -121,8 +121,7 @@ https://globeeawards.com/2025-judges-technology/
 8. Inspect the old URL `https://ishandshah.github.io/ishan-shah-portfolio/` and confirm Google sees the new canonical URL after recrawling.
 9. Check that canonical URLs match the live domain.
 10. Update LinkedIn and GitHub profile links to point to the website.
-11. Add the website link to the resume PDF.
-12. If a custom domain is added later, update canonical URLs, `sitemap.xml`, `robots.txt`, Open Graph URLs, and structured data.
+11. If a custom domain is added later, update canonical URLs, `sitemap.xml`, `robots.txt`, Open Graph URLs, and structured data.
 
 Optionally submit the site to Bing Webmaster Tools and submit the same `sitemap.xml`.
 

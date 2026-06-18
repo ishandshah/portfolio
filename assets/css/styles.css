@@ -411,7 +411,8 @@ ul {
 .check-grid,
 .activity-grid,
 .skills-grid,
-.topic-grid {
+.topic-grid,
+.faq-grid {
   display: grid;
   gap: 1rem;
 }
@@ -428,20 +429,27 @@ ul {
 
 .activity-grid,
 .skills-grid,
-.topic-grid {
+.topic-grid,
+.faq-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .activity-grid article,
 .skill-group,
-.topic-card {
+.topic-card,
+.faq-item {
   padding: 1.25rem;
 }
 
-.topic-card {
+.topic-card,
+.faq-item {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
+}
+
+.faq-item h3 {
+  font-size: 1.05rem;
 }
 
 .inline-links {
@@ -569,11 +577,12 @@ ul {
   .resume-header,
   .resume-layout,
   .project-grid,
-  .activity-grid,
-  .skills-grid,
-  .topic-grid {
-    grid-template-columns: 1fr;
-  }
+	  .activity-grid,
+	  .skills-grid,
+	  .topic-grid,
+	  .faq-grid {
+	    grid-template-columns: 1fr;
+	  }
 
   .hero {
     min-height: auto;
@@ -597,7 +606,101 @@ ul {
     width: 100%;
   }
 
+	  .timeline-item {
+	    grid-template-columns: 1fr;
+	  }
+	}
+
+@media print {
+  @page {
+    margin: 0.45in;
+  }
+
+  body {
+    background: #ffffff;
+    color: #111111;
+    font-size: 9.5pt;
+    line-height: 1.32;
+  }
+
+  .site-header,
+  .site-footer,
+  .skip-link,
+  .inline-links,
+  .button {
+    display: none !important;
+  }
+
+  .container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .resume-page .section {
+    padding: 0;
+  }
+
+  .resume-hero {
+    background: #ffffff;
+    border-bottom: 1px solid #999999;
+    margin-bottom: 0.18in;
+    padding-bottom: 0.12in;
+  }
+
+  .resume-header,
+  .resume-layout {
+    display: block;
+  }
+
+  h1 {
+    font-size: 24pt;
+  }
+
+  h2 {
+    font-size: 13pt;
+    margin-bottom: 0.06in;
+  }
+
+  h3 {
+    font-size: 10pt;
+    margin-bottom: 0.03in;
+  }
+
+  p,
+  ul {
+    margin-bottom: 0.08in;
+  }
+
+  .hero-title,
+  .timeline-date {
+    color: #111111;
+  }
+
+  .resume-main,
+  .resume-sidebar {
+    display: block;
+  }
+
+  .resume-sidebar {
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .resume-block {
+    break-inside: avoid;
+    padding-bottom: 0.1in;
+    margin-bottom: 0.1in;
+  }
+
+  .timeline {
+    gap: 0.08in;
+  }
+
   .timeline-item {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1.2in 1fr;
+    gap: 0.12in;
+    break-inside: avoid;
   }
 }
