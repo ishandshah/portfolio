@@ -94,12 +94,14 @@ The Sessionize speaker profile URL is currently:
 
 ```text
 https://sessionize.com/ishan-shah/
+https://www.webofscience.com/wos/author/record/OSH-8372-2025
 ```
 
 Additional public profile and event URLs reviewed for this SEO pass:
 
 ```text
 https://www.bintelligence.com/judge/ishan-shah
+https://www.webofscience.com/wos/author/record/OSH-8372-2025
 https://zenity.io/resources/events/ai-agent-security-summit-san-francisco
 https://globalai.community/e/y1fcl3zp
 https://globalai.community/e/v5w6z8dl
