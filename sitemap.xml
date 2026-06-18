@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
   <url>
     <loc>https://ishandshah.github.io/portfolio/</loc>
     <lastmod>2026-06-18</lastmod>
+    <image:image>
+      <image:loc>https://ishandshah.github.io/portfolio/assets/og-image.png</image:loc>
+      <image:caption>Ishan Shah, Staff Software Engineer focused on distributed systems and cloud-native platforms</image:caption>
+    </image:image>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
