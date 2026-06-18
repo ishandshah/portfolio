@@ -98,12 +98,14 @@ https://github.com/ishandshah
    - `/robots.txt`
    - `/sitemap.xml`
 4. Add the site to Google Search Console.
-5. Submit `sitemap.xml` in Google Search Console.
-6. Use URL Inspection for the homepage and request indexing.
-7. Check that canonical URLs match the live domain.
-8. Update LinkedIn and GitHub profile links to point to the website.
-9. Add the website link to the resume PDF.
-10. If a custom domain is added later, update canonical URLs, `sitemap.xml`, `robots.txt`, Open Graph URLs, and structured data.
+5. Verify the URL-prefix property for `https://ishandshah.github.io/portfolio/`.
+6. Submit `https://ishandshah.github.io/portfolio/sitemap.xml` in Google Search Console.
+7. Use URL Inspection for `https://ishandshah.github.io/portfolio/` and request indexing.
+8. Inspect the old URL `https://ishandshah.github.io/ishan-shah-portfolio/` and confirm Google sees the new canonical URL after recrawling.
+9. Check that canonical URLs match the live domain.
+10. Update LinkedIn and GitHub profile links to point to the website.
+11. Add the website link to the resume PDF.
+12. If a custom domain is added later, update canonical URLs, `sitemap.xml`, `robots.txt`, Open Graph URLs, and structured data.
 
 Optionally submit the site to Bing Webmaster Tools and submit the same `sitemap.xml`.
 
