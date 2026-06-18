@@ -96,6 +96,17 @@ The Sessionize speaker profile URL is currently:
 https://sessionize.com/ishan-shah/
 ```
 
+Additional public profile and event URLs reviewed for this SEO pass:
+
+```text
+https://www.bintelligence.com/judge/ishan-shah
+https://zenity.io/resources/events/ai-agent-security-summit-san-francisco
+https://globalai.community/e/y1fcl3zp
+https://globalai.community/e/v5w6z8dl
+https://globeeawards.com/2025-judges-artificial-intelligence/
+https://globeeawards.com/2025-judges-technology/
+```
+
 ## Indexing Checklist
 
 1. Publish the site on GitHub Pages.
