@@ -13,7 +13,7 @@ If a custom domain is added later, update canonical URLs, Open Graph URLs, Twitt
 ## Folder Structure
 
 ```text
-ishan-shah-portfolio/
+portfolio/
 ├── index.html
 ├── about.html
 ├── projects.html
@@ -63,8 +63,10 @@ http://localhost:8081
 Expected site URL:
 
 ```text
-https://ishandshah.github.io/ishan-shah-portfolio/
+https://ishandshah.github.io/portfolio/
 ```
+
+For GitHub Pages to use this path, the repository must be named `portfolio` or the site must be published from a repository with that name.
 
 If you want the site at `https://ishandshah.github.io/`, publish it from a repository named `ishandshah.github.io`.
 

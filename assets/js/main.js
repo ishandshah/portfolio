@@ -1,5 +1,11 @@
 (function () {
   const root = document.documentElement;
+  const normalizedPath = window.location.pathname.replace(/index\.html$/, "");
+
+  if (normalizedPath !== window.location.pathname) {
+    window.history.replaceState(null, "", `${normalizedPath}${window.location.search}${window.location.hash}`);
+  }
+
   const savedTheme = localStorage.getItem("theme");
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
