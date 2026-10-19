@@ -1,160 +1,26 @@
-# Ishan Shah Personal Website
+# Ishan Shah portfolio
 
-Static GitHub Pages portfolio site for Ishan Shah, Staff Software Engineer.
+This is the existing static GitHub Pages portfolio. The public routes stay at the repository root; reusable page content is rendered from `site/content.py` into the original HTML templates.
 
-Canonical GitHub Pages host:
-
-```text
-https://ishandshah.github.io
-```
-
-If a custom domain is added later, update canonical URLs, Open Graph URLs, Twitter image URLs, JSON-LD URLs, `sitemap.xml`, and `robots.txt`.
-
-## Portfolio Maintenance Notes
-
-Keep private audit notes, Gmail-derived evidence, and pending achievement decisions in `portfolio-maintenance.local.md`.
-That file is intentionally gitignored so it can stay inside this project folder without becoming part of the public repository or GitHub Pages output.
-
-## Folder Structure
-
-```text
-portfolio/
-├── index.html
-├── about.html
-├── projects.html
-├── leadership.html
-├── speaking.html
-├── writing.html
-├── service.html
-├── resume.html
-├── contact.html
-├── robots.txt
-├── sitemap.xml
-├── assets/
-│   ├── Ishan_Shah_Resume.pdf
-│   ├── og-image.png
-│   ├── profile.jpg
-│   ├── css/
-│   │   └── styles.css
-│   ├── js/
-│   │   └── main.js
-│   └── resume/
-│       └── Ishan-Shah-Resume.pdf
-└── README.md
-```
-
-## Local Preview
-
-Run a small static server:
+## Preview and build
 
 ```bash
 python3 -m http.server 8081
 ```
 
-Then visit:
+Open `http://localhost:8081`. To generate clean deployable output and run the site checks:
 
-```text
-http://localhost:8081
+```bash
+python3 scripts/build_site.py --output dist
+python3 -m unittest discover -s tests -v
 ```
 
-## GitHub Pages Deployment
+The build output contains only the nine HTML routes, site assets, `robots.txt`, `sitemap.xml`, and `.nojekyll`. The runtime site has no package installation step. `scripts/build_resume.py` regenerates the two public resume PDF aliases and requires ReportLab.
 
-1. Create or open the GitHub repository.
-2. Commit and push the contents of this folder to the repository root.
-3. In GitHub, go to `Settings` -> `Pages`.
-4. Under `Build and deployment`, select `Deploy from a branch`.
-5. Choose the `main` branch and `/root`.
-6. Save. GitHub will publish the site after the Pages workflow completes.
+## Content and evidence
 
-Expected site URL:
+Edit public claims in `site/content.py`, and layouts in `scripts/build_site.py`. `site/sessionize-snapshot.json` is the dated public Sessionize feed snapshot. Before publishing a new claim, confirm its wording, date, status, attribution, metric scope, and public URL against current source material. Keep recommendation letters, private correspondence, and petition evidence out of this repository and build output. Regenerate, run the checks, and inspect desktop and mobile layouts after content or template changes.
 
-```text
-https://ishandshah.github.io/portfolio/
-```
+## Routes and deployment
 
-For GitHub Pages to use this path, the repository must be named `portfolio` or the site must be published from a repository with that name.
-
-If you want the site at `https://ishandshah.github.io/`, publish it from a repository named `ishandshah.github.io`.
-
-## Profile URLs And External Sources
-
-Current GitHub Pages URL:
-
-```text
-https://ishandshah.github.io/portfolio/
-```
-
-The LinkedIn URL is currently:
-
-```text
-https://www.linkedin.com/in/ishandshah/
-```
-
-The GitHub profile URL is currently:
-
-```text
-https://github.com/ishandshah
-```
-
-The Sessionize speaker profile URL is currently:
-
-```text
-https://sessionize.com/ishan-shah/
-https://sessionize.com/api/speaker/json/5slht3mgap
-https://www.webofscience.com/wos/author/record/OSH-8372-2025
-```
-
-Additional public profile and event URLs reviewed for this SEO pass:
-
-```text
-https://hackernoon.com/building-event-driven-systems-that-can-recover-with-confidence
-https://hackernoon.com/ai-agents-should-bring-receipts-not-just-answers
-https://dzone.com/articles/design-replay-safe-cdc-pipelines
-https://www.javacodegeeks.com/building-idempotent-java-consumers-for-replay-safe-kafka-pipelines.html
-https://www.youtube.com/watch?v=VuQuli16914
-https://www.wearedevelopers.com/world-congress-north-america/agenda/sessions/replay-safe-architecture-building-event-driven-systems-that-can-recover-with-con-1280580
-https://cloudxconf.com/cloud-development-summit/sre-devops-and-platform-engineering/
-https://community2.cncf.io/events/details/cncf-kcd-sf-bay-area-presents-kcd-san-francisco-bay-area-2026/
-https://ai-builders-hackathon-2026.devpost.com/
-https://ngn-hacks-2026.devpost.com/
-https://www.bintelligence.com/judge/ishan-shah
-https://www.webofscience.com/wos/author/record/OSH-8372-2025
-https://zenity.io/resources/events/ai-agent-security-summit-san-francisco
-https://globalai.community/e/y1fcl3zp
-https://globalai.community/e/v5w6z8dl
-https://globeeawards.com/2025-judges-artificial-intelligence/
-https://globeeawards.com/2025-judges-technology/
-```
-
-## Indexing Checklist
-
-1. Publish the site on GitHub Pages.
-2. Confirm the site loads at the final GitHub Pages URL.
-3. Confirm these files load:
-   - `/robots.txt`
-   - `/sitemap.xml`
-4. Add the site to Google Search Console.
-5. Verify the URL-prefix property for `https://ishandshah.github.io/portfolio/`.
-6. Submit `https://ishandshah.github.io/portfolio/sitemap.xml` in Google Search Console.
-7. Use URL Inspection for `https://ishandshah.github.io/portfolio/` and request indexing.
-8. Inspect the old URL `https://ishandshah.github.io/ishan-shah-portfolio/` and confirm Google sees the new canonical URL after recrawling.
-9. Check that canonical URLs match the live domain.
-10. Update LinkedIn and GitHub profile links to point to the website.
-11. If a custom domain is added later, update canonical URLs, `sitemap.xml`, `robots.txt`, Open Graph URLs, and structured data.
-
-Optionally submit the site to Bing Webmaster Tools and submit the same `sitemap.xml`.
-
-## Validation Tools
-
-- Google Rich Results Test for JSON-LD structured data.
-- Google Search Console URL Inspection.
-- Lighthouse SEO and Accessibility checks.
-- Open Graph preview testing.
-- Live `robots.txt` check.
-- Live `sitemap.xml` check.
-
-## Notes
-
-- The site is intentionally static and dependency-free for straightforward GitHub Pages hosting.
-- Copy is public-safe and avoids confidential company details.
-- The JavaScript only handles theme toggling and mobile navigation.
+The preserved routes are `index.html`, `about.html`, `projects.html`, `leadership.html`, `speaking.html`, `writing.html`, `service.html`, `resume.html`, and `contact.html`. GitHub Pages is configured for the `main` branch root at `https://ishandshah.github.io/portfolio/`. Pushing to `main` publishes the site; confirm the build and factual review before doing so.

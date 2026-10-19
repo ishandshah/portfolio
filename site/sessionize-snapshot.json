@@ -1,0 +1,159 @@
+{
+  "speaker": {
+    "firstName": "Ishan",
+    "lastName": "Shah",
+    "tagline": "PayPal, Software Engineer | Distributed Systems, AI, and Platform Engineering",
+    "bio": "Ishan Shah is a Software Engineer with 10+ years of experience designing and delivering large-scale, event-driven, and cloud-native systems across PayPal, Nordstrom, and Securonix. He has built real-time data platforms, CDC pipelines, inventory and decisioning systems, and high-throughput search and analytics infrastructure.\r\n\r\nHis work increasingly sits at the intersection of AI and engineering operations, including AI-assisted development workflows, context engineering, agent guardrails, and AI-native reliability patterns. Ishan is especially interested in practical approaches to autonomous software development, AI SRE, incident-response agents, and “AI gardening” — managing context, memory, and entropy in long-running agentic systems.\r\n\r\nHe mentors teams on reliability, observability, schema governance, and scalable platform design, with deep expertise in Java, Kafka, Debezium, AWS, Redis, Postgres, DynamoDB, and distributed systems.",
+    "speakerProfileUrl": "https://sessionize.com/ishan-shah",
+    "photoUrl": "https://cdn.sessionize.com/image/489c-200o200o2-7tmJE3PwAoqptNEdmLNTcb.jpg",
+    "photoLargeUrl": "https://cdn.sessionize.com/image/47b8-1000o1000o1-7tmJE3PwAoqptNEdmLNTcb.jpg"
+  },
+  "sessions": [
+    {
+      "id": 169799,
+      "title": "AI Ops for Real Systems: Keeping Production AI Grounded with Fresh, Reliable Event Streams",
+      "description": "One of the biggest failure modes in production AI is not the model, but the data pipeline feeding it. This talk shows how to design operational event streams that keep AI applications grounded in fresh, trustworthy state. Using lessons from large-scale distributed systems, I’ll cover freshness SLAs, lag detection tied to domain truth, replay/backfill safety, schema governance, and failure playbooks so downstream AI services don’t make decisions on stale or inconsistent data.\r\n",
+      "sessionUrl": "https://sessionize.com/s/ishan-shah/ai-ops-for-real-systems-keeping-production-ai-grou/169799",
+      "languageCode": "en",
+      "language": "English"
+    },
+    {
+      "id": 158495,
+      "title": "Partitioning with Purpose: Kafka Producer Strategies that Cut Lag ~30%",
+      "description": "Hot partitions and uneven key distribution are common—and they quietly cap throughput. This session breaks down how purposeful partitioning (entity‑affinity keys, composite keys, and targeted salting) plus tuned producer configs (batch.size, linger.ms, acks, idempotent producers) reduced consumer lag by ~30% in a high‑throughput pipeline. We’ll align partition strategy with consumer concurrency, discuss sticky vs uniform distribution, and show practical skew detection (per‑partition lag, heatmaps) and mitigation (pre‑partitioning, re‑keying). You’ll leave with a field‑tested checklist to diagnose hotspots, tune batching, and roll out changes safely without thundering herd rebalances.",
+      "sessionUrl": "https://sessionize.com/s/ishan-shah/partitioning-with-purpose-kafka-producer-strategie/158495",
+      "languageCode": "en",
+      "language": "English"
+    },
+    {
+      "id": 158494,
+      "title": "CDC in the Real World: Debezium + Kafka Streams for Trustworthy Inventory",
+      "description": "Inventory and catalog drift hurts availability, promise accuracy, and customer trust. This talk shares a production‑proven CDC blueprint using Debezium → Kafka (Avro + Schema Registry) → Kafka Streams state stores to publish Postgres RDS changes, preserve per‑entity ordering, and keep availability accurate in near real time. We’ll cover business‑keyed partitions, compaction, idempotency, handling late/out‑of‑order events, and safe replays/backfills without double‑counting. You’ll see the operational playbook (lag SLOs tied to domain truth, DLQ triage, and runbooks for connector restarts/rebalances) plus governance practices for topic conventions and schema evolution. We’ll close with outcomes from deploying unified outbound inventory events and maintaining bounded lag under bursty load.",
+      "sessionUrl": "https://sessionize.com/s/ishan-shah/cdc-in-the-real-world-debezium-kafka-streams-for-t/158494",
+      "languageCode": "en",
+      "language": "English"
+    },
+    {
+      "id": 169798,
+      "title": "From RCA to PR: Safe Remediation Workflows with Autonomous Agents",
+      "description": "Finding the issue is only half the story. The next frontier is agents that can take incident context, propose a code or config fix, validate it in isolated environments, and prepare a PR for human review. This talk covers the architecture, control points, and failure modes of building AI remediation workflows that are useful without being reckless.\r\n\r\nWhat you’d cover:\r\n\t•\tturning logs + RCA into executable change candidates\r\n\t•\tsandboxed code/config modification\r\n\t•\tautomated test harnesses and regression gates\r\n\t•\trollback awareness and blast-radius controls\r\n\t•\tPR-first workflows instead of auto-merge fantasies",
+      "sessionUrl": "https://sessionize.com/s/ishan-shah/from-rca-to-pr-safe-remediation-workflows-with-aut/169798",
+      "languageCode": "en",
+      "language": "English"
+    },
+    {
+      "id": 169797,
+      "title": "AI SRE: Building Incident-Response Agents That Start the RCA Before You Do",
+      "description": "PagerDuty goes off. Before a human fully opens the laptop, an AI SRE agent can already be pulling telemetry, checking dashboards, correlating logs, and drafting an incident summary. This talk shows how to design an AI incident-response workflow that integrates with tools like PagerDuty, Datadog, and New Relic to accelerate triage without bypassing safety.\r\n\r\nWhat would be covered:\r\n\t•\tevent trigger from alert to investigation\r\n\t•\tgathering evidence from observability systems\r\n\t•\tforming a first-pass RCA hypothesis\r\n\t•\tdrafting timelines and incident summaries\r\n\t•\tkeeping humans in the approval loop",
+      "sessionUrl": "https://sessionize.com/s/ishan-shah/ai-sre-building-incident-response-agents-that-star/169797",
+      "languageCode": "en",
+      "language": "English"
+    },
+    {
+      "id": 169796,
+      "title": "From Prompting to Production: Guardrails for Autonomous Software Development Agents",
+      "description": "Many teams can demo coding agents. Far fewer can make them safe enough for real engineering use. This session walks through a production-minded blueprint for autonomous software-development agents that can move from issue understanding to implementation, testing, and PR creation using context engineering, harness-based execution, and guardrails.\r\n\r\nWhat would be covered:\r\n\t•\ttask decomposition and bounded execution\r\n\t•\tcontext packaging for repos, tickets, logs, and design docs\r\n\t•\tharness-based validation in Dockerized test environments\r\n\t•\ttool permissioning and approval boundaries\r\n\t•\tgenerating reviewable PRs instead of unsafe direct changes\r\n",
+      "sessionUrl": "https://sessionize.com/s/ishan-shah/from-prompting-to-production-guardrails-for-autono/169796",
+      "languageCode": "en",
+      "language": "English"
+    },
+    {
+      "id": 169795,
+      "title": "AI Gardening: Managing Entropy in Agentic Engineering Systems",
+      "description": "As AI workflows grow, so does entropy: context bloat, stale memory, conflicting instructions, noisy tools, and degraded outputs over time. This talk introduces AI Gardening as a practical operating model for keeping agentic systems healthy: pruning context, shaping memory, isolating tasks, designing reset boundaries, and controlling prompt-state sprawl before it turns into drift and unreliability.\r\n\r\nWhat would be covered:\r\n\t•\tWhy agent quality drops as context accumulates\r\n\t•\tprompt-state sprawl and hidden coupling\r\n\t•\tpruning, compaction, reset, and scoped-memory patterns\r\n\t•\tcontext engineering vs prompt hacking\r\n\t•\thow to keep long-running AI workflows maintainable",
+      "sessionUrl": "https://sessionize.com/s/ishan-shah/ai-gardening-managing-entropy-in-agentic-engineeri/169795",
+      "languageCode": "en",
+      "language": "English"
+    },
+    {
+      "id": 158517,
+      "title": "Experimentation for Platforms: A/B Testing Your Supply Chain & Routing",
+      "description": "Feature flags aren’t enough when the “feature” is a new optimizer or routing heuristic. Learn how to run fair, explainable experiments on fulfillment and logistics: backtests vs. live splits, guardrails, unit-economics attribution, and communicating wins (or honest losses) to non-technical stakeholders.",
+      "sessionUrl": "https://sessionize.com/s/ishan-shah/experimentation-for-platforms-ab-testing-your-supp/158517",
+      "languageCode": "en",
+      "language": "English"
+    },
+    {
+      "id": 158516,
+      "title": "Reverse Logistics as a Platform: From RMA to Restock in Hours",
+      "description": "Abstract: Returns are data-heavy and time-sensitive. We’ll design an event-driven reverse-logistics pipeline that connects carriers, FCs, QC, and catalog availability. Topics include as-received vs. as-inspected states, partial credits, fraud controls, and rapid resale. Expect architecture diagrams and the KPIs that changed the business.",
+      "sessionUrl": "https://sessionize.com/s/ishan-shah/reverse-logistics-as-a-platform-from-rma-to-restoc/158516",
+      "languageCode": "en",
+      "language": "English"
+    },
+    {
+      "id": 158515,
+      "title": "Schema Governance That Scales: Contracts, Versioning, and Safe Evolution",
+      "description": "Abstract: The fastest way to break a streaming platform is casual schema changes. This talk shares a governance model: namespacing, compatibility rules, deprecation playbooks, linting, CI gates, and topic lifecycle policies. We’ll cover consumer-driven contracts, backfills, and rollout sequencing that avoids “flag days.”",
+      "sessionUrl": "https://sessionize.com/s/ishan-shah/schema-governance-that-scales-contracts-versioning/158515",
+      "languageCode": "en",
+      "language": "English"
+    },
+    {
+      "id": 158514,
+      "title": "Speed vs. Cost in Fulfillment: Optimizing What Actually Matters",
+      "description": "“Closest FC ≠ fastest or cheapest.” This talk walks through a production-grade optimization that selects fulfillment centers by true speed and true cost—combining labor models, carrier rate cards, and SLA penalties with solver-backed routing. We’ll cover inputs (zones, weights, surcharges), constraints (eligibility, capacity), experimentation (backtests + traffic splits), and rollout guardrails. Expect real-world pitfalls, what moved the needle, and how we measured success.",
+      "sessionUrl": "https://sessionize.com/s/ishan-shah/speed-vs.-cost-in-fulfillment-optimizing-what-actu/158514",
+      "languageCode": "en",
+      "language": "English"
+    }
+  ],
+  "events": [
+    {
+      "id": 21300,
+      "name": "WeAreDevelopers World Congress 2026 - North America",
+      "eventStartDate": "2026-09-23T00:00:00",
+      "eventEndDate": "2026-09-25T00:00:00",
+      "location": "San Jose, California, United States",
+      "website": "https://wearedevelopers.us"
+    },
+    {
+      "id": 23471,
+      "name": "CloudX 2026",
+      "eventStartDate": "2026-09-01T00:00:00",
+      "eventEndDate": "2026-09-03T00:00:00",
+      "location": "Santa Clara, California, United States",
+      "website": "https://cloudxconf.com/"
+    },
+    {
+      "id": 24298,
+      "name": "KCD SF Bay Area 2026",
+      "eventStartDate": "2026-09-01T00:00:00",
+      "eventEndDate": "2026-09-01T00:00:00",
+      "location": "San Francisco, California, United States",
+      "website": "https://community2.cncf.io/events/details/cncf-kcd-sf-bay-area-presents-kcd-san-francisco-bay-area-2026/"
+    },
+    {
+      "id": 23247,
+      "name": " AgentCon - Saint Louis",
+      "eventStartDate": "2026-06-25T00:00:00",
+      "eventEndDate": "2026-06-25T00:00:00",
+      "location": "St. Louis, Missouri, United States",
+      "website": "https://globalai.community/chapters/saint-louis/events/agentcon-saint-louis/"
+    },
+    {
+      "id": 24181,
+      "name": " AgentCon - Phoenix",
+      "eventStartDate": "2026-06-10T00:00:00",
+      "eventEndDate": "2026-06-10T00:00:00",
+      "location": "Phoenix, Arizona, United States",
+      "website": "https://agentcon.city/Phoenix"
+    },
+    {
+      "id": 24180,
+      "name": " AgentCon - Austin",
+      "eventStartDate": "2026-06-01T00:00:00",
+      "eventEndDate": "2026-06-01T00:00:00",
+      "location": "Austin, Texas, United States",
+      "website": "https://agentcon.city/Austin"
+    },
+    {
+      "id": 23673,
+      "name": " AgentCon - Raleigh",
+      "eventStartDate": "2026-05-06T00:00:00",
+      "eventEndDate": "2026-05-06T00:00:00",
+      "location": "Durham, North Carolina, United States",
+      "website": "https://agentcon.city/raleigh"
+    }
+  ]
+}

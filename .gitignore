@@ -2,3 +2,12 @@
 .DS_Store
 portfolio-maintenance.local.md
 article-submissions.local/
+
+# Local evidence, source documents, review output and generated deployment bundle.
+__pycache__/
+*.pyc
+tmp/
+output/
+outputs/
+dist/
+portfolio-review.local/
